@@ -1,0 +1,1 @@
+import ComposedBackground from "../components/ComposedBackground";import Navbar from "../components/Navbar";import RegisterForm from "../components/RegisterForm";import Footer from "../components/Footer";const RegisterPage = () => {	return (		<ComposedBackground>			<Navbar />			<RegisterForm />			<Footer />		</ComposedBackground>	);};export default RegisterPage;

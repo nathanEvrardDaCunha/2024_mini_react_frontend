@@ -1,0 +1,1 @@
+import ComposedBackground from "../components/ComposedBackground";import Navbar from "../components/Navbar";import LoginForm from "../components/LoginForm";import Footer from "../components/Footer";const LoginPage = () => {	return (		<ComposedBackground>			<Navbar />			<LoginForm />			<Footer />		</ComposedBackground>	);};export default LoginPage;

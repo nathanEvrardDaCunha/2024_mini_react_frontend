@@ -1,0 +1,1 @@
+import React from 'react';const Footer = () => (	<footer className="bg-light text-center py-3 bg-dark">		<p className="mb-0 text-light">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>	</footer>);export default Footer;
