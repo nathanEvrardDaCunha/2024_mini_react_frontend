@@ -5,6 +5,7 @@ import React from "react";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import EmployeePage from "./pages/EmployeePage";
+import SessionAdminPage from "./pages/SessionAdminPage";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
     const authToken = Cookies.get("userId");
@@ -22,6 +23,14 @@ const App = () => {
                     element={
                         <PrivateRoute>
                             <EmployeePage />
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/session-admin"
+                    element={
+                        <PrivateRoute>
+                            <SessionAdminPage />
                         </PrivateRoute>
                     }
                 />
