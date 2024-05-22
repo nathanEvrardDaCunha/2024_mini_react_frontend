@@ -6,18 +6,46 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import EmployeePage from "./pages/EmployeePage";
 import SessionAdminPage from "./pages/SessionAdminPage";
+import SessionPage from "./pages/SessionPage";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
     const authToken = Cookies.get("userId");
     return authToken ? <>{children}</> : <Navigate to="/" replace />;
 };
 
+const PublicRoute = ({ children }: { children: React.ReactNode }) => {
+    const authToken = Cookies.get("userId");
+    return authToken ? <Navigate to="/employee" replace /> : <>{children}</>;
+};
+
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/register" element={<RegisterPage />} />
-                <Route path="/" element={<LoginPage />} />
+                <Route
+                    path="/register"
+                    element={
+                        <PublicRoute>
+                            <RegisterPage />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/"
+                    element={
+                        <PublicRoute>
+                            <SessionPage />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/login"
+                    element={
+                        <PublicRoute>
+                            <LoginPage />
+                        </PublicRoute>
+                    }
+                />
                 <Route
                     path="/employee"
                     element={
