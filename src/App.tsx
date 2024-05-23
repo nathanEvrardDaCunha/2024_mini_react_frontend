@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import EmployeePage from "./pages/EmployeePage";
 import SessionAdminPage from "./pages/SessionAdminPage";
 import SessionPage from "./pages/SessionPage";
+import ContactPage from "./pages/ContactPage";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
     const authToken = Cookies.get("userId");
@@ -18,6 +19,14 @@ const PublicRoute = ({ children }: { children: React.ReactNode }) => {
     return authToken ? <Navigate to="/employee" replace /> : <>{children}</>;
 };
 
+
+
+//TODO : Quand une session a un groupe, ne plus l'afficher dans la liste des session
+//TODO : Quand une session a un group, la mettre en "reserved" dans la database
+//TODO : Transformer encore plus de html en composant react pour chaque component (label, input field...)
+
+
+
 const App = () => {
     return (
         <Router>
@@ -27,6 +36,14 @@ const App = () => {
                     element={
                         <PublicRoute>
                             <RegisterPage />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/contact"
+                    element={
+                        <PublicRoute>
+                            <ContactPage />
                         </PublicRoute>
                     }
                 />

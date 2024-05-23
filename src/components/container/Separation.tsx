@@ -1,0 +1,1 @@
+import React from "react";const Separation: React.FC = () => {	return <hr className="m-5 border-dark" />;};export default Separation;
