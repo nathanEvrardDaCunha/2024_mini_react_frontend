@@ -8,6 +8,9 @@ import EmployeePage from "./pages/EmployeePage";
 import SessionAdminPage from "./pages/SessionAdminPage";
 import SessionPage from "./pages/SessionPage";
 import ContactPage from "./pages/ContactPage";
+import TermsPage from "./pages/TermsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import HomePage from "./pages/HomePage";
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
     const authToken = Cookies.get("userId");
@@ -31,11 +34,28 @@ const App = () => {
     return (
         <Router>
             <Routes>
+                <Route path="/" element={<HomePage />} />
                 <Route
                     path="/register"
                     element={
                         <PublicRoute>
                             <RegisterPage />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/terms"
+                    element={
+                        <PublicRoute>
+                            <TermsPage />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/privacy"
+                    element={
+                        <PublicRoute>
+                            <PrivacyPage />
                         </PublicRoute>
                     }
                 />
@@ -48,7 +68,7 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/"
+                    path="/session"
                     element={
                         <PublicRoute>
                             <SessionPage />
