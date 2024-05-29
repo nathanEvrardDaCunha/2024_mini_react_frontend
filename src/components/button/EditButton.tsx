@@ -1,0 +1,1 @@
+import React from 'react';interface EditButtonProps {	onClick: () => void;}const EditButton: React.FC<EditButtonProps> = ({ onClick }) => {	return (		<button className="btn btn-primary btn-sm me-2" onClick={onClick}>			Edit		</button>	);};export default EditButton;

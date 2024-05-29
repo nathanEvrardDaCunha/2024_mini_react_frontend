@@ -1,0 +1,1 @@
+import * as React from 'react';interface NavigateButtonProps {	onClick: () => void;	text: string;}const NavigateButton: React.FC<NavigateButtonProps> = ({ onClick, text }) => (	<button className="btn btn-light btn-lg" onClick={onClick}>{text}</button>);export default NavigateButton;

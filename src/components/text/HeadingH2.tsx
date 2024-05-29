@@ -1,0 +1,1 @@
+import * as React from 'react';interface HeadingH2Props {	text: string;}const HeadingH2: React.FC<HeadingH2Props> = ({ text }) => (	<h2 className="text-white mb-4">{text}</h2>);export default HeadingH2;

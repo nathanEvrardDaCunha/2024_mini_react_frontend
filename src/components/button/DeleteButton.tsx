@@ -1,0 +1,1 @@
+import React from 'react';interface DeleteButtonProps {	onClick: () => void;}const DeleteButton: React.FC<DeleteButtonProps> = ({ onClick }) => {	return (		<button className="btn btn-danger btn-sm" onClick={onClick}>			Delete		</button>	);};export default DeleteButton;

@@ -1,0 +1,1 @@
+import React from "react";interface ListItemProps {	children: React.ReactNode;}const ListItem: React.FC<ListItemProps> = ({ children }) => (	<li className="text-light">{children}</li>);export default ListItem;

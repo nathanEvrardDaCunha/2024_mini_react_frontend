@@ -1,0 +1,1 @@
+import React from 'react';interface HeadingH3Props {	text: string;	className?: string;}const HeadingH3: React.FC<HeadingH3Props> = ({ text, className = '' }) => {	return <h3 className={`mt-4 text-light mt-5${className}`}>{text}</h3>;};export default HeadingH3;

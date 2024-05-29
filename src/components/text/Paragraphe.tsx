@@ -1,0 +1,1 @@
+import React from "react";interface ParagrapheProps {	text: string;}const Paragraphe: React.FC<ParagrapheProps> = ({ text }) => (	<p className="mt-3 text-light">{text}</p>);export default Paragraphe;

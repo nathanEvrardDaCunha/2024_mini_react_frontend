@@ -1,0 +1,1 @@
+import React from 'react';interface TableBodyProps {	children: React.ReactNode;}const TableBody: React.FC<TableBodyProps> = ({ children }) => {	return <tbody className="bg-dark text-white">{children}</tbody>;};export default TableBody;

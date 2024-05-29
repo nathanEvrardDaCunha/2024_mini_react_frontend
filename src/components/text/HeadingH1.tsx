@@ -1,0 +1,1 @@
+import React from "react";interface HeadingH1Props {	text: string;}const HeadingH1: React.FC<HeadingH1Props> = ({ text }) => (	<h1 className="text-center mb-4 text-light">{text}</h1>);export default HeadingH1;

@@ -1,0 +1,1 @@
+import React from "react";interface FullyRoundImageProps {	src: string;	alt: string;}const FullyRoundImage: React.FC<FullyRoundImageProps> = ({ src, alt }) => (	<img src={src} alt={alt} className="img-fluid rounded-circle my-4"/>);export default FullyRoundImage;
