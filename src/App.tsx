@@ -22,14 +22,6 @@ const PublicRoute = ({ children }: { children: React.ReactNode }) => {
     return authToken ? <Navigate to="/employee" replace /> : <>{children}</>;
 };
 
-
-
-//TODO : Quand une session a un groupe, ne plus l'afficher dans la liste des session
-//TODO : Quand une session a un group, la mettre en "reserved" dans la database
-//TODO : Transformer encore plus de html en composant react pour chaque component (label, input field...)
-
-
-
 const App = () => {
     return (
         <Router>
